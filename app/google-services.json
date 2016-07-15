@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "177244944569",
+    "firebase_url": "https://notification-app-routing.firebaseio.com",
+    "project_id": "notification-app-routing",
+    "storage_bucket": "notification-app-routing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177244944569:android:3385bdfee0ecaa17",
+        "android_client_info": {
+          "package_name": "com.gmail.brianbridge.notificationapprouting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177244944569-8grbtuntn17pf8smuhmdjt2dsshjgpsj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gmail.brianbridge.notificationapprouting",
+            "certificate_hash": "9C190CF5AC88C2AEEB0C8346BE35349A55057712"
+          }
+        },
+        {
+          "client_id": "177244944569-ea54ejf5r1o5mjrtvgjkst37nlnd8hk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBz-OMCN0KCmhCMiattiTdbusqsbRQ12IU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177244944569-ea54ejf5r1o5mjrtvgjkst37nlnd8hk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
