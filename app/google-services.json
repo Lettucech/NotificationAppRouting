@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "177244944569-8grbtuntn17pf8smuhmdjt2dsshjgpsj.apps.googleusercontent.com",
+          "client_id": "177244944569-gser9j6jh81p0iocq19k3cetm96i0djs.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.gmail.brianbridge.notificationapprouting",
-            "certificate_hash": "9C190CF5AC88C2AEEB0C8346BE35349A55057712"
+            "certificate_hash": "2A1C829D9C8FCD8D38FA0439A65EAE83758E1343"
           }
         },
         {
