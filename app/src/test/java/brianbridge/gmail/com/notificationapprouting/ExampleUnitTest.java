@@ -1,4 +1,4 @@
-package brianbridge.gmail.com.notificationapprouting;
+package com.gmail.brianbridge.notificationapprouting;
 
 import org.junit.Test;
 
