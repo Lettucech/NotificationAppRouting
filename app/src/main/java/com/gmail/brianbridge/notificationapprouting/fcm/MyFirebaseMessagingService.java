@@ -11,7 +11,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.gmail.brianbridge.notificationapprouting.R;
-import com.gmail.brianbridge.notificationapprouting.activity.SecondActivity;
+import com.gmail.brianbridge.notificationapprouting.activity.ThirdActivity;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -20,31 +20,23 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
 	@Override
 	public void onMessageReceived(RemoteMessage remoteMessage) {
-		Log.d(TAG, "From: " + remoteMessage.getFrom());
-		Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
-
-		sendNotification(remoteMessage.getNotification().getBody());
+		sendNotification(remoteMessage);
 	}
 
-	private void sendNotification(String messageBody) {
-		Log.d(TAG, "send Notifcaiotn");
-		Intent intent = new Intent(this, SecondActivity.class);
+	private void sendNotification(RemoteMessage remoteMessage) {
+		Intent intent = new Intent(this, ThirdActivity.class);
 		TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
 
-		stackBuilder.addParentStack(SecondActivity.class);
+		stackBuilder.addParentStack(ThirdActivity.class);
 		stackBuilder.addNextIntent(intent);
 
 		PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-//		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
-//				PendingIntent.FLAG_ONE_SHOT);
-
-		Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+		Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 		NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
 				.setSmallIcon(R.mipmap.ic_launcher)
 				.setContentTitle("FCM Message")
-				.setContentText(messageBody)
+				.setContentText(remoteMessage.getData().get("message"))
 				.setSound(defaultSoundUri)
 				.setContentIntent(pendingIntent);
 
