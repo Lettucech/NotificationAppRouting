@@ -33,7 +33,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/activity_horizontal_margin"
-			android:text="Mapping (Data Payload)"
+			android:text="Mapping using code data payload"
 			android:textAppearance="@android:style/TextAppearance.Medium"/>
 
 		<TableLayout
@@ -110,7 +110,89 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/activity_horizontal_margin"
-			android:text="Parent of Activities"
+			android:text="Mapping using deep link data payload"
+			android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="deep link: nar://launch/{path}"/>
+
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="32dp"
+			android:layout_marginRight="32dp"
+			android:layout_marginTop="8dp"
+			android:background="@drawable/form_border">
+
+			<TableRow android:padding="4dp">
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="path"/>
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="Map to"/>
+			</TableRow>
+
+			<TableRow android:padding="4dp">
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="main"/>
+
+				<TextView
+					android:layout_weight="1"
+					android:text="MainActivity"/>
+			</TableRow>
+
+			<TableRow android:padding="4dp">
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="second"/>
+
+				<TextView
+					android:layout_weight="1"
+					android:text="SecondActivity"/>
+			</TableRow>
+
+			<TableRow android:padding="4dp">
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="third"/>
+
+				<TextView
+					android:layout_weight="1"
+					android:text="ThirdActivity"/>
+			</TableRow>
+
+			<TableRow android:padding="4dp">
+
+				<TextView
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="alone"/>
+
+				<TextView
+					android:layout_weight="1"
+					android:text="StandaloneActivity"/>
+			</TableRow>
+		</TableLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/activity_horizontal_margin"
+			android:text="Relationship of Activities"
 			android:textAppearance="@android:style/TextAppearance.Medium"/>
 
 		<TableLayout

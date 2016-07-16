@@ -12,6 +12,18 @@
 
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+
+				<data
+					android:host="launch"
+					android:path="/main"
+					android:scheme="nar"/>
+
+			</intent-filter>
 		</activity>
 		<activity
 			android:name=".activity.SecondActivity"
@@ -19,14 +31,52 @@
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value=".activity.MainActivity"/>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+
+				<data
+					android:host="launch"
+					android:path="/second"
+					android:scheme="nar"/>
+
+			</intent-filter>
 		</activity>
-		<activity android:name=".activity.ThirdActivity"
-				  android:parentActivityName=".activity.SecondActivity">
+		<activity
+			android:name=".activity.ThirdActivity"
+			android:parentActivityName=".activity.SecondActivity">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value=".activity.SecondActivity"/>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+
+				<data
+					android:host="launch"
+					android:path="/third"
+					android:scheme="nar"/>
+
+			</intent-filter>
 		</activity>
 		<activity android:name=".activity.StandaloneActivity"/>
+
+		<intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+
+			<category android:name="android.intent.category.DEFAULT"/>
+			<category android:name="android.intent.category.BROWSABLE"/>
+
+			<data
+				android:host="launch"
+				android:path="/alone"
+				android:scheme="nar"/>
+
+		</intent-filter>
 
 		<service
 			android:name=".fcm.MyFirebaseMessagingService">
